@@ -1,0 +1,59 @@
+# Quit
+q :quit
+: :read (command input)
+
+# Navigation
+k, <up> :up
+j, <down> :down
+<C-u> :half-up
+<C-d> :half-down
+<C-b>, <pgup> :page-up
+<C-f>, <pgdn> :page-down
+h, <left> :updir
+l, <right> :open
+gg, <home> :top
+G <end> :bottom
+
+# File Selection
+<space> :toggle
+v :invert
+u :unmark (Unmarks all)
+
+# File Manipulation
+y :copy
+d :cut
+p :paste
+c :clear (clear "clipboard")
+a :mkdir
+r :rename
+<del> :delete
+
+# Shell-Related
+$ :shell
+% :shell-pipe
+! :shell-wait (runs cmd in shell then wait for keypress)
+& :shell-async
+
+# Search
+/ :search
+? :search-back (searches in the opposite direction)??
+n :search-next (next item in search)
+N :search-back
+
+# View/Sort
+z<*> : Diffrent commands prefixed with z mostly to do with view
+zh :set hidden!
+
+s<*> : Diffrent Sort modes
+
+# Opening
+e : open file in editor
+i : open file in pager
+w : open shell
+x : execute current file in shell
+X : execute current file in shell-wait
+
+# Archiving
+:extract : extract any archive
+:tar : Compress with tar and gunzip
+:zip : Compress with zip
